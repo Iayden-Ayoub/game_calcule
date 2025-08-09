@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+</head>
+<style>
+    *{
+        margin: 0;
+    }
+    body {
+        background-image: linear-gradient( to top right ,red,blue,black);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+    }
+    .containerr {
+        width: 300px;
+        height: 180px;
+        padding-top: 30px;
+        background-image: linear-gradient( to bottom left ,yellow,black);
+        border-radius: 20px;
+    }
+    input {
+        height: 40px;
+        width: 190px;
+        border-radius: 10px ;
+        border: 1px blue;
+        padding-left: 75px;
+        outline: none;
+        margin-left: 15px;
+        color: wheat;
+        background-color: rgb(15, 1, 1);
+    }
+    button {
+        height: 40px;
+        width: 150px;
+        margin-left: 75px;
+        border-radius: 10px;
+        background-color: blue;
+        color: aliceblue;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        transform: scale(1.1);
+    }
+    input:focus {
+        transform: scale(1.1);
+    }
+</style>
+<body>
+    <div class="containerr">
+        <input type="text" id="in" placeholder="Give Me Your Name"><br><br>
+        <input type="text" id="player" placeholder="hard / mediume / isee"><br><br>
+        <button onclick="saveName()">Commencer</button>
+    </div>
+
+    <script>
+        function saveName() {
+            let name = document.getElementById('in').value.trim();
+            let player = document.getElementById('player').value.trim();
+            if (name !== "" && player !== "") {
+                localStorage.setItem("playerName", name);
+                if(player == "hard" || player == "isee" || player == "mediume"){
+                    localStorage.setItem("player", player);
+                    window.location.href = 'calcule.html';
+                }else{
+                    alert("Veuillez choisir un mode");
+                }
+                
+                
+            } else {
+                alert("Saisis ton nom or mode !");
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- Introduire la citation : Il est essentiel d’introduire la citation avec une phrase qui en explique le contexte. Par exemple : Comme l'affirme l'auteur... ou Selon Victor Hugo.... Cela permet de l’intégrer harmonieusement dans le texte.
+
+Mettre la citation entre guillemets : Une citation doit toujours être encadrée par des guillemets pour la distinguer des propos de l’élève. En outre, si la citation dépasse trois lignes, il est préférable de l’isoler en paragraphe, en retrait.
+
+Indiquer la source : Après chaque citation, il faut mentionner précisément l’origine de celle-ci, soit en note de bas de page, soit entre parenthèses (nom de l’auteur, titre, année).
+
+→ À l’inverse, insérer une citation sans l’expliquer, sans guillemets ou sans source est considéré comme du plagiat, ce qui est interdit. -->

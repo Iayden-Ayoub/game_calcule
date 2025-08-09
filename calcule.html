@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul Mental</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #720fcf;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .qt {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #qt {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #qt:hover {
+            background-color: darkred;
+        }
+
+        .h, .cmpt {
+            position: absolute;
+            left: 570px;
+            color: white;
+        }
+
+        .h {
+            top: 20px;
+        }
+
+        .cmpt {
+            top: 70px;
+            margin-left: 90px;
+        }
+
+        .container {
+            background-color: #991010;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            width: 300px;
+        }
+
+        #Correct {
+            display: none;
+            background-color: green;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            margin-left: 70px;
+            border: none;
+        }
+
+        span {
+            font-size: 35px;
+            font-weight: bold;
+            color: white;
+            margin: 0 10px;
+        }
+
+        p {
+            color: white;
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-bottom: 2px solid white;
+            background: transparent;
+            color: white;
+            text-align: center;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+        }
+
+        #btn {
+            margin-top: 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #btn:hover {
+            background-color: darkblue;
+            transform: scale(1.05);
+        }
+
+        .cmpt h1 {
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="qt">
+        <button id="qt" onclick="document.location.href='calcule1.html'; window.alert('Are you sure you want to quit?')">Quitter</button>
+    </div>
+
+    <div class="h">
+        <h1 id="hh"></h1>
+    </div>
+
+    <div class="cmpt">
+        <h1 id="cmpt"></h1>
+    </div>
+
+    <div class="container">
+        <button id="Correct">Correct</button><br><br>
+        <span id="nw">5</span>
+        <span id="plus">+</span>
+        <span id="nt">6</span>
+        <p>Donner La Réponse</p>
+        <input type="number" id="int"><br>
+        <button id="btn">Soumettre</button>
+    </div>
+
+    <script src="calcule.js"></script>
+</body>
+</html>
